@@ -1,0 +1,1 @@
+Ky projekt eshte krijuar nga une (Krenar Miftari) duke perdorur vetem HTML dhe CSS.

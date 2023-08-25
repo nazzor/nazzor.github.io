@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap');
+
+
+:root {
+    --blue: #0088cc;
+    --blue-click: #0058a3;
+    --black: #222220;
+    --grey: #666666;
+    --lightgrey: #979797;
+    --bg-light: #f8f8f8;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.bg-light{
+    background-color: var(--bg-light);
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--black);
+}
+
+.section-title p{
+    font-size: 16px;
+    color: var(--black);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 30px 0;
+    }
+
+.cards .card{
+    border: 1px solid var(--lightgrey);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cards .card h3{
+    color: var(--black);
+}
+.cards .card p{
+    margin-top: 20px;
+}
+
+.cards .card a{
+    align-items: flex-end;
+}
+
+.button{
+    color: var(--bg-light);
+    background-color: var(--blue);
+    font-weight: bold;
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.button:hover{
+    background-color: var(--blue-click);
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+/* HEADER */
+
+header{
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logo{
+    width: 180px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+nav a{
+    font-weight: 600;
+    color: var(--black);
+}
+
+nav a:hover{
+    color: var(--blue);
+    opacity: 0.8;
+}
+
+nav li{
+    display: inline;
+    margin: 0 15px;
+}
+nav li ul{
+    display: none;
+}
+
+nav ul.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color:  rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-radius: 10px;
+}
+
+nav ul.dropdown-menu li{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+nav li:hover ul.dropdown-menu{
+    display: block;
+}
+
+nav ul.dropdown-menu li a{
+    display: block;
+    padding: 7px;
+    color: var(--black);
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul.dropdown-menu li a:hover{
+    color: white;
+    background-color: var(--blue);
+}
+
+
+/* MAIN */
+
+main .container{
+    height: calc(120vh - 120px);
+    padding-top: 350px;
+    display: flex;
+    align-items: center;
+}
+
+main.background-img{
+    background-image: url(../Images/rregullat_2.jpg);
+    background-position: bottom center;
+    background-size: 100vw;
+    z-index: 2;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    text-align: center;
+    font-size: 2.8em;
+    color: black;
+    border-color: white;
+    text-shadow: 0px 1px 10px white;
+    margin-top: 100px;
+    filter: blur(1.7px);
+    transition: all .3s ease-in-out;
+}
+
+.intro h1:hover {
+    filter: none;
+}
+
+.intro a {
+    display: inline-block;
+    color: var(--blue);
+    text-decoration: none;
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 12px 70px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--blue);
+    transition: all .3s ease-in-out;
+}
+
+.intro a:hover{
+    background-color: var(--blue-click);
+}
+
+.intro p {
+    margin-top: 90px;
+    font-size: 16px;
+    color: black;
+    border-color: white;
+    text-shadow: 2px 2px 5px white;
+}
+
+
+/* SERVICES */
+
+#services{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+#services .cards .card{
+    transition: all .3 ease-in-out;
+}
+
+#services .cards .card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* RULES */
+
+#rules{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+#rules.rules-img{
+    background-image: url(../Images/rregullat_2.jpg);
+    background-position: bottom center;
+    background-size: 100vw 150vh;
+}
+
+#rules div .cards .card{
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+#rules div .cards .card:hover{
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+#rules div .cards .card h3{
+    color: white;
+}
+
+#rules div .section-title{
+    color: white;
+}
+
+
+/* STORY */
+
+#story{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+#story .container{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "galeria historiku";
+}
+
+#story .galeria{
+    padding: 50px;
+    grid-area: galeria;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "foto1 foto4"
+        "foto1 foto5"
+        "foto2 foto5"
+        "foto3 foto6"
+        "foto3 foto6";
+}
+
+#story .galeria img{
+    width: 90%;
+    height: 90%;
+}
+
+.foto1{
+    grid-area: foto1;
+}
+
+.foto2{
+    grid-area: foto2;
+}
+
+.foto3{
+    grid-area: foto3;
+}
+
+.foto4{
+    grid-area: foto4;
+}
+
+.foto5{
+    grid-area: foto5;
+}
+
+.foto6{
+    grid-area: foto6;
+}
+
+#story .historiku{
+    padding: 50px;
+}
+
+#story .historiku h3{
+    padding-bottom: 30px;
+}
+
+
+/* CONTACT */
+
+#contact{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+#contact .contact-form{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contact .contact-img{
+    padding-top: 50px;
+}
+
+#contact .form{
+    align-items: center;
+    padding-left: 100px;
+}
+
+#contact form{
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact label{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--lightgrey);
+    border-radius: 5px;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+}
+
+footer img{
+    width: 250px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer h3{
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+footer p{
+    margin-right: 100px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+footer a{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+footer a:hover{
+    color: var(--blue);
+    opacity: 0.8;
+}
+
+
+/*  Mobile Responsive */
+
+@media screen and (max-width: 768px) {
+
+    .container{
+        width: 90%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .cards,
+    #story .container,
+    #story .galeria,
+    footer .container,
+    #contact .contact-form{
+        grid-template-columns: 1fr;
+    }
+
+    header{
+        height: fit-content;
+    }
+
+    div .intro{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    main{
+        padding: 80px 0px;
+    }
+
+    main div .intro h1{
+        font-size: 2em;
+        filter: none;
+    }
+
+    main div .intro a{
+        font-size: 1em;
+    }
+
+    main div .intro p{
+        font-size: small;
+
+    }
+
+    main .container{
+        height: auto;
+    }
+
+    main.background-img{
+        background-image: url(/assets/Images/rregullat_2_mobile.png);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        padding-top: 0;
+        height: 97vh;
+    }
+
+    #services .cards .card{
+        transition: none;
+    }
+
+    #story .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "historiku"
+            "galeria";
+    }
+
+    #story .historiku{
+        text-align: left;
+        padding: 10px;
+    }
+
+    #story .historiku h3{
+        text-align: center;
+    }
+
+    #story .galeria img{
+        width: 100%;
+    }
+
+    #contact .contact-img{
+        display: none;
+    }
+
+    #contact .contact-form{
+        display: block;
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+    }
+
+    #contact .form{
+        padding-left: 0;
+        padding-top: 50px;
+    }
+
+    #rules.rules-img{
+        background-image: url(../Images/rregullat_mobile_rules.png);
+        background-position: bottom center;
+    }
+
+    #rules div .cards .card{
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    #rules div p span{
+        font-weight: 400;
+        text-shadow: 2px 2px 5px white;
+    }
+
+    footer h3{
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+}
